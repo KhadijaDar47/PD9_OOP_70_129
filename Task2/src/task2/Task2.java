@@ -14,22 +14,24 @@ import java.util.Scanner;
 public class Task2 {
 
     /**
-     * @param args the command line arguments
+     * @param line
+     * @return
      */
-    public static String displayVertical(String line)
-    {
+    public static String displayVertical(String line) {
         for (int i = 0; i < line.length(); i++) {
-           
+
             System.out.println(line.charAt(i));
         }
         return "";
     }
+
     public static void main(String[] args) {
         String line;
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the String: ");
+        System.out.println("Please Enter The String:");
         line = input.nextLine();
         displayVertical(line);
+
     }
-    
+
 }
