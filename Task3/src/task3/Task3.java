@@ -52,7 +52,7 @@ public class Task3 {
         int option = 0;
         Scanner input = new Scanner(System.in);
         do {
-            System.out.println("-1 To Remove Multiple Spaces\n-2 To Remove Integer\n-3 To Encrypt String");
+            System.out.println("Press 1 To Remove Multiple Spaces\nPress 2 To Remove Integer\nPress 3 To Encrypt String");
             System.out.println("Enter option: ");
             option=input.nextInt();
             switch (option) {
@@ -60,13 +60,13 @@ public class Task3 {
                     input.nextLine();
                     System.out.println("Please Enter the String: ");
                     line = input.nextLine();
-                    System.out.println("After remoing extra spaces: "+ridMultipleBlank(line));
+                    System.out.println("After removing extra spaces: "+ridMultipleBlank(line));
                     break;
                 case 2:
                      input.nextLine();
                     System.out.println("Please Enter the String: ");
                     line = input.nextLine();
-                    System.out.println("After remoing integer: "+removeInteger(line));
+                    System.out.println("After removing integer: "+removeInteger(line));
                     break;
                 case 3:
                      input.nextLine();
