@@ -27,7 +27,7 @@ public class Task4 {
         } else {
             System.out.println(num + " is Odd ");
 
-        }
+        } 
 
     }
 
