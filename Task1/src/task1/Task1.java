@@ -47,9 +47,9 @@ public class Task1 {
         Boolean flag = false;
         if (s.contains("the")) {
             flag = true;
-            System.out.println("the is a part of the string");
+            System.out.println("\"the\" is a part of the string");
         } else {
-            System.out.println("the is not a part of the string");
+            System.out.println("\"the\" is not a part of the string");
         }
         return flag;
     }
