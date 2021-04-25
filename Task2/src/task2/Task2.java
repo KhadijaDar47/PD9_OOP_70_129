@@ -18,6 +18,7 @@ public class Task2 {
      * @return
      */
     public static String displayVertical(String line) {
+        System.out.println("It Will Display In Vertical");
         for (int i = 0; i < line.length(); i++) {
 
             System.out.println(line.charAt(i));
