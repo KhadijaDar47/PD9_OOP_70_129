@@ -16,10 +16,6 @@ public class Task4 {
     /**
      */
     // Using the max() method of Math Class
-    public static void FindMaxNumber() {
-
-    }
-
     public static void FindEvenOdd(int num) {
         if (num % 2 == 0) {
             System.out.println(num + " is Even ");
@@ -52,54 +48,49 @@ public class Task4 {
 
     public static int CountSpaces(String str) {
         int space = 0;
-        for(int i = 0;i < str.length();i++) 
-        {
-          char ch = str.charAt(i);
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
             if (ch == ' ') {
                 space++;
             }
         }
-       return space;
+        return space;
     }
-    
+
     public static int DigitCounter(String s) {
-       int count=0;
+        int count = 0;
         for (int i = 0; i < s.length(); i++) {
-            if ((s.charAt(i) >= '0' && s.charAt(i) <= '9'))
-            {
+            if ((s.charAt(i) >= '0' && s.charAt(i) <= '9')) {
                 count = count + 1;
             }
         }
 
         return count;
     }
-    
-     public static int CapitalCounter(String cap)
-    {
-        int c=0;
-       
-        for(int i=0;i<cap.length();i++)
-        {
-            if(cap.charAt(i)>='A' && cap.charAt(i)<='Z')
+
+    public static int CapitalCounter(String cap) {
+        int c = 0;
+
+        for (int i = 0; i < cap.length(); i++) {
+            if (cap.charAt(i) >= 'A' && cap.charAt(i) <= 'Z') {
                 c++;
+            }
         }
-    
-    return c;
+
+        return c;
     }
-    
-    
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String option;
+        int option;
 
         do {
 
-            System.out.println("Press 1 To Find Maximum Number\nPress 2 To Find Even Odd Numbers\nPress 3 To Check Equality Of Strings\nPress 4 To Check An Empty String\nPress 5 To Count White Spaces In String\nPress 6 to Count Digits\nPress 7 to Count capital Letters");
+            System.out.println("Press 1 To Find Maximum Number\nPress 2 To Find Even Odd Numbers\nPress 3 To Check Equality Of Strings\nPress 4 To Check An Empty String\nPress 5 To Count White Spaces In String\nPress 6 to Count Digits\nPress 7 to Count capital Letters\nPress 0 To Close");
             System.out.println("Enter option: ");
-            option = input.nextLine();
+            option = input.nextInt();
 
-            switch (Integer.valueOf(option)) {
+            switch (option) {
 
                 // TODO code application logic here
                 // Function 1 
@@ -121,6 +112,7 @@ public class Task4 {
                     break;
 
                 case 3:
+                    input.nextLine();
                     String s1;
                     String s2;
                     System.out.println("Enter The First String: ");
@@ -131,6 +123,7 @@ public class Task4 {
                     break;
 
                 case 4:
+                    input.nextLine();
                     String s3;
                     System.out.println("Enter The String: ");
                     s3 = input.nextLine();
@@ -138,35 +131,39 @@ public class Task4 {
                     break;
 
                 case 5:
+                    input.nextLine();
                     String str;
                     System.out.println("Enter The String: ");
-                    str= input.nextLine();
-                    System.out.println("No of spaces: "+Task4.CountSpaces(str));
+                    str = input.nextLine();
+                    System.out.println("No of spaces: " + Task4.CountSpaces(str));
                     break;
-                    
+
                 case 6:
+                    input.nextLine();
                     String s;
                     System.out.println("Enter The String: ");
                     s = input.nextLine();
-                    System.out.println("Digits : "+Task4.DigitCounter(s));
+                    System.out.println("Digits : " + Task4.DigitCounter(s));
                     break;
-                    
+
                 case 7:
-                   String d;
-                   System.out.println("Enter The String: ");
-                   d = input.nextLine();
-                   System.out.println("Capital Letters Are: " + Task4.CapitalCounter(d));
-                   break;
-                    
+                    input.nextLine();
+                    String d;
+                    System.out.println("Enter The String: ");
+                    d = input.nextLine();
+                    System.out.println("Capital Letters Are: " + Task4.CapitalCounter(d));
+                    break;
+                case 0:
+                    System.out.println("System Closed");
+                    break;
 
                 default:
                     System.out.println("INVALID OPTION");
                     break;
-                    
-                    
+
             }
 
-        } while (Integer.valueOf(option) != 0);
+        } while (option != 0);
     }
 
 }

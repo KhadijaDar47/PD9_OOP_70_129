@@ -43,7 +43,7 @@ public class Task3 {
              newcode=(char)code;
              returncode=returncode+newcode;
          }
-         return returncode;
+         return returncode.toUpperCase();
         
     }
     
@@ -52,7 +52,7 @@ public class Task3 {
         int option = 0;
         Scanner input = new Scanner(System.in);
         do {
-            System.out.println("Press 1 To Remove Multiple Spaces\nPress 2 To Remove Integer\nPress 3 To Encrypt String");
+            System.out.println("Press 1 To Remove Multiple Spaces\nPress 2 To Remove Integer\nPress 3 To Encrypt String\nPress 0 To Close");
             System.out.println("Enter option: ");
             option=input.nextInt();
             switch (option) {
@@ -73,6 +73,9 @@ public class Task3 {
                     System.out.println("Please Enter the String: ");
                     line = input.nextLine();
                     System.out.println("After Encryption: "+stringEncryption(line));
+                    break;
+                case 0:
+                    System.out.println("System Closed");
                     break;
                 default:
                     System.out.println("INVALID OPTION");
